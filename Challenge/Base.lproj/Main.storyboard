@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Principal View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="principalTVC" id="BYZ-38-t0r" customClass="PrincipalViewController" customModule="Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ucm-Ly-Hfd">
+                                <rect key="frame" x="0.0" y="82" width="414" height="814"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9lu-p0-FHt"/>
+                                </connections>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G93-i7-k0P">
+                                <rect key="frame" x="0.0" y="82" width="414" height="814"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ZAJ-RI-aCA"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4O6-a9-6V1"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="5OB-CX-nDD">
+                                <rect key="frame" x="57" y="49" width="300" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="bXi-Oz-LKZ"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Map"/>
+                                    <segment title="List"/>
+                                </segments>
+                                <connections>
+                                    <action selector="togglePresentation:" destination="BYZ-38-t0r" eventType="valueChanged" id="dF3-wS-cEH"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G93-i7-k0P" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MWL-R1-FkD"/>
+                            <constraint firstAttribute="bottom" secondItem="G93-i7-k0P" secondAttribute="bottom" id="P0x-wT-IZW"/>
+                            <constraint firstItem="Ucm-Ly-Hfd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vyi-56-Snu"/>
+                            <constraint firstItem="Ucm-Ly-Hfd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dmL-AZ-Um2"/>
+                            <constraint firstItem="Ucm-Ly-Hfd" firstAttribute="top" secondItem="5OB-CX-nDD" secondAttribute="bottom" constant="5" id="h4l-Or-XQg"/>
+                            <constraint firstItem="G93-i7-k0P" firstAttribute="top" secondItem="5OB-CX-nDD" secondAttribute="bottom" constant="5" id="hx8-iw-O0j"/>
+                            <constraint firstItem="5OB-CX-nDD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pS8-dK-0FB"/>
+                            <constraint firstAttribute="bottom" secondItem="Ucm-Ly-Hfd" secondAttribute="bottom" id="srE-VN-djK"/>
+                            <constraint firstItem="5OB-CX-nDD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="yqa-QY-HV1"/>
+                            <constraint firstItem="G93-i7-k0P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zRT-MH-UH9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="listTableView" destination="G93-i7-k0P" id="GAo-VC-zh7"/>
+                        <outlet property="poiMap" destination="Ucm-Ly-Hfd" id="AbR-kd-QoX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="110.49107142857143"/>
+        </scene>
+    </scenes>
+</document>
