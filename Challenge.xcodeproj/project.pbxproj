@@ -11,6 +11,9 @@
 		A08B78E222D647C000BCD350 /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A08B78E122D647C000BCD350 /* MapManager.m */; };
 		A08B78E422D65A8A00BCD350 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B78E322D65A8A00BCD350 /* Services.swift */; };
 		A08B78EA22D6860B00BCD350 /* CustomPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A08B78E922D6860B00BCD350 /* CustomPointAnnotation.m */; };
+		A08B78ED22D689F100BCD350 /* VehicleCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B78EC22D689F100BCD350 /* VehicleCoordinate.swift */; };
+		A08B78EF22D68A0600BCD350 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B78EE22D68A0600BCD350 /* Vehicle.swift */; };
+		A08B78FC22D69E9500BCD350 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B78FB22D69E9500BCD350 /* Mapper.swift */; };
 		A0F5F6D822D5302100B6074C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F5F6D722D5302100B6074C /* AppDelegate.swift */; };
 		A0F5F6DA22D5302200B6074C /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F5F6D922D5302200B6074C /* PrincipalViewController.swift */; };
 		A0F5F6DD22D5302200B6074C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F5F6DB22D5302200B6074C /* Main.storyboard */; };
@@ -34,12 +37,15 @@
 
 /* Begin PBXFileReference section */
 		1F237C3E74B3AE501FCB7D44 /* Pods-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge/Pods-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
-		A08B78DF22D647BF00BCD350 /* Challenge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Challenge-Bridging-Header.h"; sourceTree = "<group>"; };
 		A08B78E022D647C000BCD350 /* MapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
 		A08B78E122D647C000BCD350 /* MapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
 		A08B78E322D65A8A00BCD350 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		A08B78E822D6860B00BCD350 /* CustomPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPointAnnotation.h; sourceTree = "<group>"; };
 		A08B78E922D6860B00BCD350 /* CustomPointAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPointAnnotation.m; sourceTree = "<group>"; };
+		A08B78EC22D689F100BCD350 /* VehicleCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCoordinate.swift; sourceTree = "<group>"; };
+		A08B78EE22D68A0600BCD350 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		A08B78FB22D69E9500BCD350 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		A08B78FE22D69F2700BCD350 /* Challenge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Challenge-Bridging-Header.h"; sourceTree = "<group>"; };
 		A0F5F6D422D5302100B6074C /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F5F6D722D5302100B6074C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0F5F6D922D5302200B6074C /* PrincipalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalViewController.swift; sourceTree = "<group>"; };
@@ -93,10 +99,94 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A08B78EB22D689E200BCD350 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A08B78EC22D689F100BCD350 /* VehicleCoordinate.swift */,
+				A08B78EE22D68A0600BCD350 /* Vehicle.swift */,
+				A08B78FB22D69E9500BCD350 /* Mapper.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A08B78F022D691B700BCD350 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0F5F6D722D5302100B6074C /* AppDelegate.swift */,
+				A0F5F6E322D5302400B6074C /* Info.plist */,
+				A0F5F6DE22D5302400B6074C /* Assets.xcassets */,
+				A0F5F6E022D5302400B6074C /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A08B78F122D69BF000BCD350 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A08B78FA22D69D4D00BCD350 /* Cell */,
+				A08B78F922D69D3F00BCD350 /* Storyboards */,
+				A08B78F822D69D3000BCD350 /* CustomMarker */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A08B78F222D69BFE00BCD350 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A0F5F6FB22D554EF00B6074C /* GlobalVariables.swift */,
+				A08B78E022D647C000BCD350 /* MapManager.h */,
+				A08B78E122D647C000BCD350 /* MapManager.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A08B78F322D69C0E00BCD350 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A0F5F6D922D5302200B6074C /* PrincipalViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A08B78F422D69C3400BCD350 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A08B78E322D65A8A00BCD350 /* Services.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A08B78F822D69D3000BCD350 /* CustomMarker */ = {
+			isa = PBXGroup;
+			children = (
+				A08B78E822D6860B00BCD350 /* CustomPointAnnotation.h */,
+				A08B78E922D6860B00BCD350 /* CustomPointAnnotation.m */,
+			);
+			path = CustomMarker;
+			sourceTree = "<group>";
+		};
+		A08B78F922D69D3F00BCD350 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A0F5F6DB22D5302200B6074C /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A08B78FA22D69D4D00BCD350 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A0F5F6F922D5507900B6074C /* PrincipalTableViewCell.swift */,
+				A0F5F6F722D54CDD00B6074C /* PrincipalCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		A0F5F6CB22D5302100B6074C = {
 			isa = PBXGroup;
 			children = (
 				A0F5F6D622D5302100B6074C /* Challenge */,
+				A08B78FE22D69F2700BCD350 /* Challenge-Bridging-Header.h */,
 				A0F5F6EB22D5302400B6074C /* ChallengeTests */,
 				A0F5F6D522D5302100B6074C /* Products */,
 				5971E4AF3A9A43F1F19E45FD /* Pods */,
@@ -116,21 +206,12 @@
 		A0F5F6D622D5302100B6074C /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				A0F5F6D722D5302100B6074C /* AppDelegate.swift */,
-				A0F5F6D922D5302200B6074C /* PrincipalViewController.swift */,
-				A0F5F6DB22D5302200B6074C /* Main.storyboard */,
-				A0F5F6DE22D5302400B6074C /* Assets.xcassets */,
-				A0F5F6E022D5302400B6074C /* LaunchScreen.storyboard */,
-				A0F5F6E322D5302400B6074C /* Info.plist */,
-				A0F5F6F722D54CDD00B6074C /* PrincipalCell.xib */,
-				A0F5F6F922D5507900B6074C /* PrincipalTableViewCell.swift */,
-				A0F5F6FB22D554EF00B6074C /* GlobalVariables.swift */,
-				A08B78E022D647C000BCD350 /* MapManager.h */,
-				A08B78E122D647C000BCD350 /* MapManager.m */,
-				A08B78DF22D647BF00BCD350 /* Challenge-Bridging-Header.h */,
-				A08B78E322D65A8A00BCD350 /* Services.swift */,
-				A08B78E822D6860B00BCD350 /* CustomPointAnnotation.h */,
-				A08B78E922D6860B00BCD350 /* CustomPointAnnotation.m */,
+				A08B78F422D69C3400BCD350 /* Service */,
+				A08B78F322D69C0E00BCD350 /* Controllers */,
+				A08B78F222D69BFE00BCD350 /* Helpers */,
+				A08B78F122D69BF000BCD350 /* View */,
+				A08B78EB22D689E200BCD350 /* Model */,
+				A08B78F022D691B700BCD350 /* Supporting Files */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -296,8 +377,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A08B78EF22D68A0600BCD350 /* Vehicle.swift in Sources */,
 				A0F5F6FA22D5507900B6074C /* PrincipalTableViewCell.swift in Sources */,
 				A08B78E422D65A8A00BCD350 /* Services.swift in Sources */,
+				A08B78ED22D689F100BCD350 /* VehicleCoordinate.swift in Sources */,
+				A08B78FC22D69E9500BCD350 /* Mapper.swift in Sources */,
 				A08B78EA22D6860B00BCD350 /* CustomPointAnnotation.m in Sources */,
 				A0F5F6DA22D5302200B6074C /* PrincipalViewController.swift in Sources */,
 				A08B78E222D647C000BCD350 /* MapManager.m in Sources */,

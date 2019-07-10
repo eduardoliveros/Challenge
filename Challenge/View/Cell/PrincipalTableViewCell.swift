@@ -11,7 +11,8 @@ import UIKit
 
 class PrincipalTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var labelId: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var stateLabel: UILabel!
     
     class func nib() -> UINib {
         return UINib(nibName: "PrincipalCell", bundle: nil)

@@ -18,17 +18,26 @@ class PrincipalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCells()
-        
-        let region = MKCoordinateRegion(center: MapManager.center(), latitudinalMeters: MapManager.latitudinalMeters(), longitudinalMeters: MapManager.longitudinalMeters())
-        poiMap.setRegion(region, animated: false)
+        setMapConfiguration()
+        getVehiclesRequest()
+    }
+    
+    // MARK: - Register Custom Cell to principal TableView
+    func registerCells() {
+        listTableView.register(PrincipalTableViewCell.nib(), forCellReuseIdentifier: ViewIdentifier.principalCell)
+    }
+    
+    // MARK: - Call endpoint to get all services on defined Bound
+    private func getVehiclesRequest() {
         let serviceManager = Services.shared
         serviceManager.delegate = self
         serviceManager.getVehicles()
-        // Do any additional setup after loading the view.
     }
     
-    func registerCells() {
-        listTableView.register(PrincipalTableViewCell.nib(), forCellReuseIdentifier: ViewIdentifier.principalCell)
+    // MARK: - Set Region and configure map attributes
+    private func setMapConfiguration() {
+        let region = MKCoordinateRegion(center: MapManager.center(), latitudinalMeters: MapManager.latitudinalMeters(), longitudinalMeters: MapManager.longitudinalMeters())
+        poiMap.setRegion(region, animated: false)
     }
     
     @IBAction func togglePresentation(_ sender: UISegmentedControl) {
@@ -44,7 +53,8 @@ class PrincipalViewController: UIViewController {
         }
     }
     
-    func drawPoints() {
+    // MARK: - Draw Vehicles on Map
+    private func drawPoints() {
         for vehicle in vehicles {
             let info2 = CustomPointAnnotation()
             info2.coordinate = CLLocationCoordinate2DMake(vehicle.coordinate.latitude, vehicle.coordinate.longitude)
@@ -58,6 +68,7 @@ class PrincipalViewController: UIViewController {
 
 extension PrincipalViewController: MKMapViewDelegate {
     
+    // MARK: - Annotation View Design
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let annotation = annotation as? CustomPointAnnotation else {
             return nil
@@ -77,20 +88,18 @@ extension PrincipalViewController: MKMapViewDelegate {
     }
 }
 
-extension PrincipalViewController: UITableViewDataSource {
+extension PrincipalViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vehicles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ViewIdentifier.principalCell) as! PrincipalTableViewCell
-        cell.labelId.text = "\(vehicles[indexPath.row].id)"
+        let vehicle = vehicles[indexPath.row]
+        cell.titleLabel.text = vehicle.type + " \(vehicle.id)"
+        cell.stateLabel.text = vehicle.state
         return cell
     }
-}
-
-extension PrincipalViewController: UITableViewDelegate {
-    
 }
 
 extension PrincipalViewController: ServiceResponse {
@@ -98,33 +107,14 @@ extension PrincipalViewController: ServiceResponse {
         guard let data = response as? [String: Any], let poiList = data["poiList"] as? [Any] else {
             return
         }
-        let decoder = JSONDecoder()
-        decoder.dataDecodingStrategy = .deferredToData
-        do {
-            let dataNew = try Data(JSONSerialization.data(withJSONObject: poiList, options: .sortedKeys))
-            let list: [Vehicle] = try! decoder.decode([Vehicle].self, from: dataNew)
-            vehicles = list
-            listTableView.reloadData()
-            drawPoints()
-        } catch {
-            print(error)
-        }
+        
+        vehicles = Mapper.decodeWithDataArray(poiList)
+        listTableView.reloadData()
+        drawPoints()
     }
     
     func didCompleteRequestWithError(_ error: Error, request: Int) {
-        
+        /// TODO: Include banner notification
+        print(error)
     }
-}
-
-// MARK: - Vehicle
-struct Vehicle: Codable {
-    let id: Int
-    let coordinate: VehicleCoordinate
-    let state, type: String
-    let heading: Double
-}
-
-// MARK: - Coordinate
-struct VehicleCoordinate: Codable {
-    let latitude, longitude: Double
 }
