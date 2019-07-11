@@ -14,12 +14,15 @@
 		A08B78ED22D689F100BCD350 /* VehicleCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B78EC22D689F100BCD350 /* VehicleCoordinate.swift */; };
 		A08B78EF22D68A0600BCD350 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B78EE22D68A0600BCD350 /* Vehicle.swift */; };
 		A08B78FC22D69E9500BCD350 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B78FB22D69E9500BCD350 /* Mapper.swift */; };
+		A08B790222D6A38200BCD350 /* MapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B790122D6A38200BCD350 /* MapperTest.swift */; };
+		A08B790422D6A49500BCD350 /* MockVehiclesArray.json in Resources */ = {isa = PBXBuildFile; fileRef = A08B790322D6A49500BCD350 /* MockVehiclesArray.json */; };
+		A08B790622D6A4BF00BCD350 /* FileUttilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B790522D6A4BF00BCD350 /* FileUttilities.swift */; };
 		A0F5F6D822D5302100B6074C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F5F6D722D5302100B6074C /* AppDelegate.swift */; };
 		A0F5F6DA22D5302200B6074C /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F5F6D922D5302200B6074C /* PrincipalViewController.swift */; };
 		A0F5F6DD22D5302200B6074C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F5F6DB22D5302200B6074C /* Main.storyboard */; };
 		A0F5F6DF22D5302400B6074C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F5F6DE22D5302400B6074C /* Assets.xcassets */; };
 		A0F5F6E222D5302400B6074C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F5F6E022D5302400B6074C /* LaunchScreen.storyboard */; };
-		A0F5F6ED22D5302400B6074C /* ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F5F6EC22D5302400B6074C /* ChallengeTests.swift */; };
+		A0F5F6ED22D5302400B6074C /* MapManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F5F6EC22D5302400B6074C /* MapManagerTests.swift */; };
 		A0F5F6F822D54CDD00B6074C /* PrincipalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0F5F6F722D54CDD00B6074C /* PrincipalCell.xib */; };
 		A0F5F6FA22D5507900B6074C /* PrincipalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F5F6F922D5507900B6074C /* PrincipalTableViewCell.swift */; };
 		A0F5F6FC22D554EF00B6074C /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F5F6FB22D554EF00B6074C /* GlobalVariables.swift */; };
@@ -45,7 +48,10 @@
 		A08B78EC22D689F100BCD350 /* VehicleCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCoordinate.swift; sourceTree = "<group>"; };
 		A08B78EE22D68A0600BCD350 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		A08B78FB22D69E9500BCD350 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
-		A08B78FE22D69F2700BCD350 /* Challenge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Challenge-Bridging-Header.h"; sourceTree = "<group>"; };
+		A08B78FE22D69F2700BCD350 /* Challenge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Challenge-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		A08B790122D6A38200BCD350 /* MapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperTest.swift; sourceTree = "<group>"; };
+		A08B790322D6A49500BCD350 /* MockVehiclesArray.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockVehiclesArray.json; sourceTree = "<group>"; };
+		A08B790522D6A4BF00BCD350 /* FileUttilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUttilities.swift; sourceTree = "<group>"; };
 		A0F5F6D422D5302100B6074C /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F5F6D722D5302100B6074C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0F5F6D922D5302200B6074C /* PrincipalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +60,7 @@
 		A0F5F6E122D5302400B6074C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0F5F6E322D5302400B6074C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0F5F6E822D5302400B6074C /* ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0F5F6EC22D5302400B6074C /* ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeTests.swift; sourceTree = "<group>"; };
+		A0F5F6EC22D5302400B6074C /* MapManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManagerTests.swift; sourceTree = "<group>"; };
 		A0F5F6EE22D5302400B6074C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0F5F6F722D54CDD00B6074C /* PrincipalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrincipalCell.xib; sourceTree = "<group>"; };
 		A0F5F6F922D5507900B6074C /* PrincipalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalTableViewCell.swift; sourceTree = "<group>"; };
@@ -113,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				A0F5F6D722D5302100B6074C /* AppDelegate.swift */,
-				A0F5F6E322D5302400B6074C /* Info.plist */,
 				A0F5F6DE22D5302400B6074C /* Assets.xcassets */,
 				A0F5F6E022D5302400B6074C /* LaunchScreen.storyboard */,
 			);
@@ -125,7 +130,7 @@
 			children = (
 				A08B78FA22D69D4D00BCD350 /* Cell */,
 				A08B78F922D69D3F00BCD350 /* Storyboards */,
-				A08B78F822D69D3000BCD350 /* CustomMarker */,
+				A08B78F822D69D3000BCD350 /* CustomMarker MV */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,13 +161,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		A08B78F822D69D3000BCD350 /* CustomMarker */ = {
+		A08B78F822D69D3000BCD350 /* CustomMarker MV */ = {
 			isa = PBXGroup;
 			children = (
 				A08B78E822D6860B00BCD350 /* CustomPointAnnotation.h */,
 				A08B78E922D6860B00BCD350 /* CustomPointAnnotation.m */,
 			);
-			path = CustomMarker;
+			path = "CustomMarker MV";
 			sourceTree = "<group>";
 		};
 		A08B78F922D69D3F00BCD350 /* Storyboards */ = {
@@ -182,11 +187,26 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		A08B78FF22D6A31500BCD350 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A0F5F6EC22D5302400B6074C /* MapManagerTests.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A08B790022D6A33700BCD350 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A08B790122D6A38200BCD350 /* MapperTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A0F5F6CB22D5302100B6074C = {
 			isa = PBXGroup;
 			children = (
 				A0F5F6D622D5302100B6074C /* Challenge */,
-				A08B78FE22D69F2700BCD350 /* Challenge-Bridging-Header.h */,
 				A0F5F6EB22D5302400B6074C /* ChallengeTests */,
 				A0F5F6D522D5302100B6074C /* Products */,
 				5971E4AF3A9A43F1F19E45FD /* Pods */,
@@ -206,11 +226,13 @@
 		A0F5F6D622D5302100B6074C /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				A08B78F422D69C3400BCD350 /* Service */,
-				A08B78F322D69C0E00BCD350 /* Controllers */,
-				A08B78F222D69BFE00BCD350 /* Helpers */,
+				A08B78FE22D69F2700BCD350 /* Challenge-Bridging-Header.h */,
+				A0F5F6E322D5302400B6074C /* Info.plist */,
 				A08B78F122D69BF000BCD350 /* View */,
 				A08B78EB22D689E200BCD350 /* Model */,
+				A08B78F322D69C0E00BCD350 /* Controllers */,
+				A08B78F422D69C3400BCD350 /* Service */,
+				A08B78F222D69BFE00BCD350 /* Helpers */,
 				A08B78F022D691B700BCD350 /* Supporting Files */,
 			);
 			path = Challenge;
@@ -219,8 +241,11 @@
 		A0F5F6EB22D5302400B6074C /* ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				A0F5F6EC22D5302400B6074C /* ChallengeTests.swift */,
+				A08B790022D6A33700BCD350 /* Model */,
+				A08B78FF22D6A31500BCD350 /* Helpers */,
 				A0F5F6EE22D5302400B6074C /* Info.plist */,
+				A08B790322D6A49500BCD350 /* MockVehiclesArray.json */,
+				A08B790522D6A4BF00BCD350 /* FileUttilities.swift */,
 			);
 			path = ChallengeTests;
 			sourceTree = "<group>";
@@ -320,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A08B790422D6A49500BCD350 /* MockVehiclesArray.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +420,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0F5F6ED22D5302400B6074C /* ChallengeTests.swift in Sources */,
+				A08B790222D6A38200BCD350 /* MapperTest.swift in Sources */,
+				A0F5F6ED22D5302400B6074C /* MapManagerTests.swift in Sources */,
+				A08B790622D6A4BF00BCD350 /* FileUttilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

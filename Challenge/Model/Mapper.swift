@@ -10,6 +10,7 @@
 import Foundation
 
 class Mapper {
+    // MARK: - Method to decode Json data to return a vehicle array
     static func decodeWithDataArray(_ array: [Any]) -> [Vehicle] {
         let decoder = JSONDecoder()
         decoder.dataDecodingStrategy = .deferredToData

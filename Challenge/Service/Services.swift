@@ -22,8 +22,10 @@ class Services: NSObject {
     var manager = AFHTTPSessionManager()
     public var delegate: ServiceResponse?
     
+    // MARK: - Method to call the request to get all Vehicles
+    // TODO: This method should include variable coordinates to update the bounds with an user movement
     func getVehicles() {
-        let urlAndParameters = GlobalVariables.URLS.getVehicles+"?p2Lat=" + "\(kSouthernmost)" + "&p1Lon=" + "\(kWestermost)" + "&p1Lat=" + "\(kNorthernmost)" + "&p2Lon=" + "\(kEasternmost)"
+        let urlAndParameters = GlobalVariables.URLS.getVehicles + "?p2Lat=" + "\(kSouthernmost)" + "&p1Lon=" + "\(kWestermost)" + "&p1Lat=" + "\(kNorthernmost)" + "&p2Lon=" + "\(kEasternmost)"
         manager.get(urlAndParameters,
                     parameters: [],
                     progress: { _ in },
@@ -31,6 +33,7 @@ class Services: NSObject {
                         self.delegate?.didCompleteRequestWithResponse(operation, request: GlobalVariables.RequestNumbers.getVehicles)
         },
                     failure: { _, error in
+                        /// TODO: Include banner notification
                         print(error)
         }
         )

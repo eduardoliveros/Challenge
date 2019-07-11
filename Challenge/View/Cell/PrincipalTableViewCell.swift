@@ -14,6 +14,7 @@ class PrincipalTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var stateLabel: UILabel!
     
+    // MARK: - return cell nib
     class func nib() -> UINib {
         return UINib(nibName: "PrincipalCell", bundle: nil)
     }

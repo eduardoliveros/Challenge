@@ -36,7 +36,7 @@ class PrincipalViewController: UIViewController {
     
     // MARK: - Set Region and configure map attributes
     private func setMapConfiguration() {
-        let region = MKCoordinateRegion(center: MapManager.center(), latitudinalMeters: MapManager.latitudinalMeters(), longitudinalMeters: MapManager.longitudinalMeters())
+        let region = MKCoordinateRegion(center: MapManager.centerInBounds(), latitudinalMeters: MapManager.latitudinalMeters(), longitudinalMeters: MapManager.longitudinalMeters())
         poiMap.setRegion(region, animated: false)
     }
     
@@ -104,6 +104,7 @@ extension PrincipalViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension PrincipalViewController: ServiceResponse {
     func didCompleteRequestWithResponse(_ response: Any?, request: Int) {
+        /// TODO: Include switch to identify request number
         guard let data = response as? [String: Any], let poiList = data["poiList"] as? [Any] else {
             return
         }

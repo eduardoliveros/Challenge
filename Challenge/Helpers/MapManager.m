@@ -10,7 +10,7 @@
 
 @implementation MapManager
 
-+ (CLLocationCoordinate2D) center {
++ (CLLocationCoordinate2D) centerInBounds {
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake((kNorthernmost + kSouthernmost) / 2, (kEasternmost + kWestermost) / 2);
     return center;
 }
