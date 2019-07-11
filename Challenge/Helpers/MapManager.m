@@ -10,20 +10,23 @@
 
 @implementation MapManager
 
-+ (CLLocationCoordinate2D) centerInBounds {
+// MARK: - Return center In a Bound
++ (CLLocationCoordinate2D) centerInBound {
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake((kNorthernmost + kSouthernmost) / 2, (kEasternmost + kWestermost) / 2);
     return center;
 }
 
-+ (CLLocationDistance) latitudinalMeters {
-    CLLocation *northernmosLatitude = [[CLLocation alloc] initWithLatitude: 0.0 longitude: kWestermost];
-    CLLocation *southernmostLatitude = [[CLLocation alloc] initWithLatitude: 0.0 longitude: kEasternmost];
-    return [southernmostLatitude distanceFromLocation: northernmosLatitude];
+// MARK: - Return latitudinal distance in Meters
++ (CLLocationDistance) latitudinalMeters: (double) westermostLat easternmostLat: (double)easternmostLat {
+    CLLocation *westermostLatitude = [[CLLocation alloc] initWithLatitude: 0.0 longitude: westermostLat];
+    CLLocation *easternmostLatitude = [[CLLocation alloc] initWithLatitude: 0.0 longitude: easternmostLat];
+    return [easternmostLatitude distanceFromLocation: westermostLatitude];
 }
 
-+ (CLLocationDistance) longitudinalMeters {
-    CLLocation *northernmosLatitude = [[CLLocation alloc] initWithLatitude: kNorthernmost longitude: 0.0];
-    CLLocation *southernmostLatitude = [[CLLocation alloc] initWithLatitude: kSouthernmost longitude: 0.0];
+// MARK: - Return longitudinalMeters distance in Meters
++ (CLLocationDistance) longitudinalMeters: (double) northernmosLng southernmostLng: (double)southernmostLng {
+    CLLocation *northernmosLatitude = [[CLLocation alloc] initWithLatitude: northernmosLng longitude: 0.0];
+    CLLocation *southernmostLatitude = [[CLLocation alloc] initWithLatitude: southernmostLng longitude: 0.0];
     return [southernmostLatitude distanceFromLocation: northernmosLatitude];
 }
 

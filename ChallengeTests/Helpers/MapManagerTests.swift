@@ -26,7 +26,7 @@ class MapManagerTests: XCTestCase {
 
     func test_MapManager_latitudinalMeters_defaultLatitudinalMeters() {
         // Given
-        let latitudinalMeters = MapManager.latitudinalMeters()
+        let latitudinalMeters = MapManager.latitudinalMeters(kWestermost, easternmostLat: kEasternmost)
         
         // Then
         XCTAssertEqual(latitudinalMeters, defaultLatitudinalMeters, "latitudinalMeters should be \(defaultLatitudinalMeters)")
@@ -34,7 +34,7 @@ class MapManagerTests: XCTestCase {
     
     func test_MapManager_longitudinalMeters_defaultLongitudinalMeters() {
         // Given
-        let longitudinalMeters = MapManager.longitudinalMeters()
+        let longitudinalMeters = MapManager.longitudinalMeters(kNorthernmost, southernmostLng: kSouthernmost)
         
         // Then
         XCTAssertEqual(longitudinalMeters, defaultLongitudinalMeters, "longitudinalMeters should be \(defaultLongitudinalMeters)")
@@ -42,7 +42,7 @@ class MapManagerTests: XCTestCase {
     
     func test_MapManager_CenterInBounds_CompareLatitudeAndLongitude() {
         // Given
-        let center = MapManager.centerInBounds()
+        let center = MapManager.centerInBound()
         
         // Then
         XCTAssertEqual(center.latitude, defaultCenterLatitude, "center latitude should be \(defaultCenterLatitude)")

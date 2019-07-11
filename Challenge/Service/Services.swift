@@ -24,8 +24,10 @@ class Services: NSObject {
     
     // MARK: - Method to call the request to get all Vehicles
     // TODO: This method should include variable coordinates to update the bounds with an user movement
-    func getVehicles() {
-        let urlAndParameters = GlobalVariables.URLS.getVehicles + "?p2Lat=" + "\(kSouthernmost)" + "&p1Lon=" + "\(kWestermost)" + "&p1Lat=" + "\(kNorthernmost)" + "&p2Lon=" + "\(kEasternmost)"
+    func getVehiclesWithBound(_ bound: Bound) {
+        
+        let urlAndParameters = GlobalVariables.URLS.getVehicles + "?p2Lat=" + "\(bound.southernmostCoordinate.latitude)" + "&p1Lon=" + "\(bound.northernmosCoordinate.longitude)" + "&p1Lat=" + "\(bound.northernmosCoordinate.latitude)" + "&p2Lon=" + "\(bound.southernmostCoordinate.longitude)"
+        
         manager.get(urlAndParameters,
                     parameters: [],
                     progress: { _ in },

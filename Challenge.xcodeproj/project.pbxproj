@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		810B7EEEFF40D03123328370 /* Pods_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B3D1FD48D80AFCABF154F7 /* Pods_Challenge.framework */; };
-		A08B78E222D647C000BCD350 /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A08B78E122D647C000BCD350 /* MapManager.m */; };
+		A08B78E222D647C000BCD350 /* Challenge-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = A08B78E122D647C000BCD350 /* Challenge-Bridging-Header.h */; };
 		A08B78E422D65A8A00BCD350 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B78E322D65A8A00BCD350 /* Services.swift */; };
 		A08B78EA22D6860B00BCD350 /* CustomPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A08B78E922D6860B00BCD350 /* CustomPointAnnotation.m */; };
 		A08B78ED22D689F100BCD350 /* VehicleCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B78EC22D689F100BCD350 /* VehicleCoordinate.swift */; };
@@ -17,6 +17,7 @@
 		A08B790222D6A38200BCD350 /* MapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B790122D6A38200BCD350 /* MapperTest.swift */; };
 		A08B790422D6A49500BCD350 /* MockVehiclesArray.json in Resources */ = {isa = PBXBuildFile; fileRef = A08B790322D6A49500BCD350 /* MockVehiclesArray.json */; };
 		A08B790622D6A4BF00BCD350 /* FileUttilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08B790522D6A4BF00BCD350 /* FileUttilities.swift */; };
+		A08B790822D6CEAB00BCD350 /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A08B790722D6CEAB00BCD350 /* MapManager.m */; };
 		A0F5F6D822D5302100B6074C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F5F6D722D5302100B6074C /* AppDelegate.swift */; };
 		A0F5F6DA22D5302200B6074C /* PrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F5F6D922D5302200B6074C /* PrincipalViewController.swift */; };
 		A0F5F6DD22D5302200B6074C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0F5F6DB22D5302200B6074C /* Main.storyboard */; };
@@ -41,17 +42,17 @@
 /* Begin PBXFileReference section */
 		1F237C3E74B3AE501FCB7D44 /* Pods-Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Challenge/Pods-Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		A08B78E022D647C000BCD350 /* MapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
-		A08B78E122D647C000BCD350 /* MapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
+		A08B78E122D647C000BCD350 /* Challenge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Challenge-Bridging-Header.h"; path = "../Challenge-Bridging-Header.h"; sourceTree = "<group>"; };
 		A08B78E322D65A8A00BCD350 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		A08B78E822D6860B00BCD350 /* CustomPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPointAnnotation.h; sourceTree = "<group>"; };
 		A08B78E922D6860B00BCD350 /* CustomPointAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPointAnnotation.m; sourceTree = "<group>"; };
 		A08B78EC22D689F100BCD350 /* VehicleCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCoordinate.swift; sourceTree = "<group>"; };
 		A08B78EE22D68A0600BCD350 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		A08B78FB22D69E9500BCD350 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
-		A08B78FE22D69F2700BCD350 /* Challenge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Challenge-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		A08B790122D6A38200BCD350 /* MapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperTest.swift; sourceTree = "<group>"; };
 		A08B790322D6A49500BCD350 /* MockVehiclesArray.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockVehiclesArray.json; sourceTree = "<group>"; };
 		A08B790522D6A4BF00BCD350 /* FileUttilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUttilities.swift; sourceTree = "<group>"; };
+		A08B790722D6CEAB00BCD350 /* MapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
 		A0F5F6D422D5302100B6074C /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F5F6D722D5302100B6074C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0F5F6D922D5302200B6074C /* PrincipalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalViewController.swift; sourceTree = "<group>"; };
@@ -138,9 +139,10 @@
 		A08B78F222D69BFE00BCD350 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A08B790722D6CEAB00BCD350 /* MapManager.m */,
 				A0F5F6FB22D554EF00B6074C /* GlobalVariables.swift */,
 				A08B78E022D647C000BCD350 /* MapManager.h */,
-				A08B78E122D647C000BCD350 /* MapManager.m */,
+				A08B78E122D647C000BCD350 /* Challenge-Bridging-Header.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -226,7 +228,6 @@
 		A0F5F6D622D5302100B6074C /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				A08B78FE22D69F2700BCD350 /* Challenge-Bridging-Header.h */,
 				A0F5F6E322D5302400B6074C /* Info.plist */,
 				A08B78F122D69BF000BCD350 /* View */,
 				A08B78EB22D689E200BCD350 /* Model */,
@@ -406,11 +407,12 @@
 				A08B78EF22D68A0600BCD350 /* Vehicle.swift in Sources */,
 				A0F5F6FA22D5507900B6074C /* PrincipalTableViewCell.swift in Sources */,
 				A08B78E422D65A8A00BCD350 /* Services.swift in Sources */,
+				A08B790822D6CEAB00BCD350 /* MapManager.m in Sources */,
 				A08B78ED22D689F100BCD350 /* VehicleCoordinate.swift in Sources */,
 				A08B78FC22D69E9500BCD350 /* Mapper.swift in Sources */,
 				A08B78EA22D6860B00BCD350 /* CustomPointAnnotation.m in Sources */,
 				A0F5F6DA22D5302200B6074C /* PrincipalViewController.swift in Sources */,
-				A08B78E222D647C000BCD350 /* MapManager.m in Sources */,
+				A08B78E222D647C000BCD350 /* Challenge-Bridging-Header.h in Sources */,
 				A0F5F6FC22D554EF00B6074C /* GlobalVariables.swift in Sources */,
 				A0F5F6D822D5302100B6074C /* AppDelegate.swift in Sources */,
 			);

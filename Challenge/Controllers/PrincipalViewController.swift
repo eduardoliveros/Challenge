@@ -31,12 +31,13 @@ class PrincipalViewController: UIViewController {
     private func getVehiclesRequest() {
         let serviceManager = Services.shared
         serviceManager.delegate = self
-        serviceManager.getVehicles()
+        let bound = Bound(northernmosCoordinate: CLLocationCoordinate2D(latitude: kNorthernmost, longitude: kWestermost), southernmostCoordinate: CLLocationCoordinate2D(latitude: kSouthernmost, longitude: kEasternmost))
+        serviceManager.getVehiclesWithBound(bound)
     }
     
     // MARK: - Set Region and configure map attributes
     private func setMapConfiguration() {
-        let region = MKCoordinateRegion(center: MapManager.centerInBounds(), latitudinalMeters: MapManager.latitudinalMeters(), longitudinalMeters: MapManager.longitudinalMeters())
+        let region = MKCoordinateRegion(center: MapManager.centerInBound(), latitudinalMeters: MapManager.latitudinalMeters(kWestermost, easternmostLat: kEasternmost), longitudinalMeters: MapManager.longitudinalMeters(kNorthernmost, southernmostLng: kSouthernmost))
         poiMap.setRegion(region, animated: false)
     }
     

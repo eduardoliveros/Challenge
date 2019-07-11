@@ -27,3 +27,8 @@ class Mapper {
         return []
     }
 }
+
+struct Bound {
+    let northernmosCoordinate: CLLocationCoordinate2D
+    let southernmostCoordinate: CLLocationCoordinate2D
+}
